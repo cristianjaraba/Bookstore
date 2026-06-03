@@ -69,10 +69,7 @@ hr{
     display: flex;
     align-items: center;
 } 
-table{
-    display: flex;
-
-    font-weight: normal;
+table{font-weight: normal;
 }
 th{
     text-align: start;

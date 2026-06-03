@@ -1,0 +1,11 @@
+.like-btn,
+.send-comment-btn{
+    background-color: inherit;
+    
+    border: none;
+
+    cursor: pointer;
+}
+.liked{
+    fill: #FD5B4F;
+}

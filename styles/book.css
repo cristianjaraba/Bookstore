@@ -1,0 +1,148 @@
+.book{
+    background-color: rgb(7, 81, 106);
+
+    height: 500px;
+    width: 300px;
+
+    border-radius: 10px;
+
+    font-family: 'Figtree';
+    color: floralwhite;
+
+    overflow: hidden;
+}
+.book h3{
+    padding: 10px;
+
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+}
+hr{
+    border:solid 1px rgb(172, 212, 225);
+}
+.img-wrapper{
+    position: relative;
+    background-color: rgba(41, 116, 141);
+
+    height: 110px;
+}
+.bg-img{
+    position: absolute;
+    z-index: 1;
+    background-color: rgb(96, 176, 203);
+    filter: blur(10px);
+
+    width: 100%;
+    height: 100%;
+}
+img{
+    position: absolute;
+    z-index: 2;
+
+    width: 100px;
+    height: auto;
+
+    /* img zentrieren */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.book-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    padding: 10px;
+}
+.book-price-likes{
+    display: flex;
+    justify-content: space-between;
+}
+.book-price-likes > p{
+    color: #FD5B4F;
+    font-weight: bold;
+}
+.book-likes{
+    display: flex;
+    align-items: center;
+} 
+table{
+    display: flex;
+}
+th{
+    text-align: start;
+}
+.book-comments{
+
+    padding: 10px;
+
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.input-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.input-container svg{
+    width: 25px;
+    height: auto;
+
+    fill: rgb(172, 212, 225);
+}
+input{
+    padding: 5px;
+
+    width: 100%;
+
+    background-color: rgba(41, 116, 141);
+
+    border: none;
+    border-bottom:solid 2px rgb(172, 212, 225);
+    border-radius: 5px;
+
+    margin-top: 5px;
+
+    color: floralwhite;
+
+}
+input::placeholder {
+  color: rgb(172, 212, 225);
+}
+input:focus{
+    outline: solid 2px rgb(172, 212, 225);
+    border: none;
+}
+textarea{
+    color: floralwhite;
+
+    font-family: 'Figtree';
+    font-size: 16px;
+
+    background-color: rgb(7, 81, 106);
+
+    border: none;
+
+    resize: none;
+
+    height: 100px;
+
+    text-align: left;
+
+    padding-right: 5px;
+}
+/* Scrollbar: https://css-tricks.com/custom-scrollbars-in-webkit/ */
+textarea::-webkit-scrollbar {
+    width: 5px;
+}
+textarea::-webkit-scrollbar-track {
+    background-color: black;
+}
+textarea::-webkit-scrollbar-thumb {
+    background-color: rgb(209, 232, 239);
+}

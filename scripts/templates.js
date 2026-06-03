@@ -44,8 +44,8 @@ function getBookHTML(i) {
             </table>
         </div>
         <div class="input-container">
-            <input placeholder="Schreibe dein Kommentar..." type="text">
-            <button class="send-comment-btn">
+            <input id="input${i}" placeholder="Schreibe dein Kommentar..." type="text">
+            <button class="send-comment-btn" onclick="addComment(${i})">
             <svg fill="#000000" width="800" height="800" viewBox="0 0 31.806 31.806"xmlns="http://www.w3.org/2000/svg">
                 <g>
                     <path d="M1.286,12.465c-0.685,0.263-1.171,0.879-1.268,1.606c-0.096,0.728,0.213,1.449,0.806,1.88l6.492,4.724L30.374,2.534

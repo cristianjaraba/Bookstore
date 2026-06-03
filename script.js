@@ -23,3 +23,16 @@ function likeDislike(i) {
     }
     else likeDisplayerRef.innerHTML = parseInt(likeDisplayerRef.innerHTML) - 1;
 }
+
+function addComment(i) {
+    const inputRef = document.getElementById('input' + i)
+    const newComment = inputRef.value;
+    const tableRef = document.getElementById('comments-table' + i);
+
+    tableRef.innerHTML += `
+<tr>
+    <th>[banana123]</th>
+    <td>:  ${newComment}</td>
+</tr>`;
+    inputRef.value = "";
+}

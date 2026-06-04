@@ -18,11 +18,19 @@ function renderBooks() {
 function likeDislike(i) {
     const likeBtnRef = document.getElementById('heart-icon' + i);
     const likeDisplayerRef = document.getElementById('like-displayer' + i);
-    if (likeBtnRef.classList.toggle('liked')) {
+
+    if (likeBtnRef.classList.contains('liked')) {
+        likeBtnRef.classList.remove('liked');
+        likeDisplayerRef.innerHTML = parseInt(likeDisplayerRef.innerHTML) - 1;
+    }
+    else if (likeBtnRef.classList.contains('like')) {
+        likeBtnRef.classList.remove('like');
+        likeDisplayerRef.innerHTML = parseInt(likeDisplayerRef.innerHTML) - 1;
+    }
+    else {
+        likeBtnRef.classList.add('like');
         likeDisplayerRef.innerHTML = parseInt(likeDisplayerRef.innerHTML) + 1;
     }
-
-    else likeDisplayerRef.innerHTML = parseInt(likeDisplayerRef.innerHTML) - 1;
 }
 
 function addComment(i) {

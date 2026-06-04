@@ -15,6 +15,10 @@
 .liked{
     fill: #FD5B4F;
     stroke: none;
+}
+.like{
+    fill: #FD5B4F;
+    stroke: none;
     animation-name: "myAnimation";
     animation-duration: 2s;
 }

@@ -69,13 +69,17 @@ hr{
     display: flex;
     align-items: center;
 } 
-table{font-weight: normal;
+table{
+    font-weight: normal;
 }
 th{
     text-align: start;
     vertical-align: baseline;
 
     font-weight: normal;
+}
+td{
+    overflow-wrap: break-word;
 }
 .book-comments{
 
@@ -134,6 +138,7 @@ input:focus{
   padding: 5px;
 
   overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 

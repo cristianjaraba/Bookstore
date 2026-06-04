@@ -13,7 +13,7 @@ function getBookHTML(i) {
         <div class="book-price-likes">
             <p>${books[i].price}€</p>
             <div class="book-likes">
-                <p id="like-displayer${i}">${books[i].likes}</p>
+                <p class="like-displayer" id="like-displayer${i}">${books[i].likes}</p>
                 <button onclick="likeDislike(${i})" class="like-btn">
                     <svg id="heart-icon${i}" stroke="black" stroke-width="1" id="heart-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#07516a" class="bi bi-heart-fill" viewBox="0 0 16 16">
                         <path fill-rule="evenodd"d="M8 1.314C12.438-3.248 23.534 4.735 8 15-7.534 4.736 3.562-3.248 8 1.314" />

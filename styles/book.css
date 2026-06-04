@@ -68,7 +68,12 @@ hr{
 .book-likes{
     display: flex;
     align-items: center;
+    gap: 5px;
 } 
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric */
+.like-displayer{
+      font-variant-numeric: tabular-nums;
+}
 table{
     font-weight: normal;
 }

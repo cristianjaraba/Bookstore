@@ -68,3 +68,5 @@ function getCommentHTML(i, j) {
     <td>:  ${books[i].comments[j].comment}</td>
 </tr>`;
 }
+
+

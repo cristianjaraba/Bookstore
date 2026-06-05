@@ -1,6 +1,21 @@
 const booksWrapperRef = document.getElementById('books-wrapper');
 
+function saveToLocalStorage() {
+    localStorage.setItem("myBooks", JSON.stringify(books));
+}
+
+function getFromLocalStorage() {
+    let booksFromLocalStorage = JSON.parse(localStorage.getItem("myBooks"));
+    if (booksFromLocalStorage == null) {
+        saveToLocalStorage();
+        books = JSON.parse(localStorage.getItem("myBooks"));
+    } else {
+        books = JSON.parse(localStorage.getItem("myBooks"));
+    }
+}
+
 function renderBooks() {
+    getFromLocalStorage();
     booksWrapperRef.innerHTML = "";
     for (let bookIndex = 0; bookIndex < books.length; bookIndex++) {
         booksWrapperRef.innerHTML += getBookHTML(bookIndex);
@@ -18,31 +33,31 @@ function renderBooks() {
 function likeDislike(i) {
     const likeBtnRef = document.getElementById('heart-icon' + i);
     const likeDisplayerRef = document.getElementById('like-displayer' + i);
-
+    let newLikesAmount;
     if (likeBtnRef.classList.contains('liked')) {
         likeBtnRef.classList.remove('liked');
-        likeDisplayerRef.innerHTML = parseInt(likeDisplayerRef.innerHTML) - 1;
-    }
-    else if (likeBtnRef.classList.contains('like')) {
-        likeBtnRef.classList.remove('like');
-        likeDisplayerRef.innerHTML = parseInt(likeDisplayerRef.innerHTML) - 1;
+        newLikesAmount = parseInt(likeDisplayerRef.innerHTML) - 1;
+        books[i].liked = false;
     }
     else {
-        likeBtnRef.classList.add('like');
-        likeDisplayerRef.innerHTML = parseInt(likeDisplayerRef.innerHTML) + 1;
+        likeBtnRef.classList.add('liked');
+        newLikesAmount = parseInt(likeDisplayerRef.innerHTML) + 1;
+        books[i].liked = true;
     }
+    books[i].likes = newLikesAmount;
+    saveToLocalStorage();
+    renderBooks();
 }
 
 function addComment(i) {
     const inputRef = document.getElementById('input' + i);
-    const tableRef = document.getElementById('comments-table' + i);
-
-    tableRef.innerHTML += `
-<tr>
-    <th>[anonym]</th>
-    <td>:  ${inputRef.value}</td>
-</tr>
-`;
-    inputRef.value = "";
+    books[i].comments.push(
+        {
+            "name": "anonym",
+            "comment": `${inputRef.value}`
+        }
+    );
+    saveToLocalStorage();
+    renderBooks();
 }
 

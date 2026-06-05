@@ -1,4 +1,4 @@
-.book{
+.book {
     background-color: rgb(7, 81, 106);
 
     height: 500px;
@@ -11,7 +11,8 @@
 
     overflow: hidden;
 }
-.book > h3{
+
+.book>h3 {
     padding: 10px;
 
     height: 70px;
@@ -20,16 +21,19 @@
     align-items: center;
     justify-content: center;
 }
-hr{
-    border:solid 1px rgb(172, 212, 225);
+
+hr {
+    border: solid 1px rgb(172, 212, 225);
 }
-.img-wrapper{
+
+.img-wrapper {
     position: relative;
     background-color: rgba(41, 116, 141);
 
     height: 110px;
 }
-.bg-img{
+
+.bg-img {
     position: absolute;
     z-index: 1;
     background-color: rgb(96, 176, 203);
@@ -38,7 +42,8 @@ hr{
     width: 100%;
     height: 100%;
 }
-.book-img{
+
+.book-img {
     position: absolute;
     z-index: 2;
 
@@ -50,43 +55,52 @@ hr{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.book-content{
+
+.book-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
 
     padding: 10px;
 }
-.book-price-likes{
+
+.book-price-likes {
     display: flex;
     justify-content: space-between;
 }
-.book-price-likes > p{
+
+.book-price-likes>p {
     color: #FD5B4F;
     font-weight: bold;
 }
-.book-likes{
+
+.book-likes {
     display: flex;
     align-items: center;
     gap: 5px;
-} 
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric */
-.like-displayer{
-      font-variant-numeric: tabular-nums;
 }
-table{
+
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric */
+.like-displayer {
+    font-variant-numeric: tabular-nums;
+}
+
+table {
     font-weight: normal;
 }
-th{
+
+th {
     text-align: start;
     vertical-align: baseline;
 
     font-weight: normal;
 }
-td{
+
+td {
     overflow-wrap: break-word;
 }
-.book-comments{
+
+.book-comments {
 
     padding: 10px;
 
@@ -96,18 +110,21 @@ td{
     flex-direction: column;
     gap: 5px;
 }
+
 .input-container {
     display: flex;
     align-items: center;
     gap: 5px;
 }
-.input-container svg{
+
+.input-container svg {
     width: 25px;
     height: auto;
 
     fill: rgb(172, 212, 225);
 }
-input{
+
+input {
     padding: 5px;
 
     width: 100%;
@@ -117,7 +134,7 @@ input{
     border-top: solid 2px rgb(7, 81, 106);
     border-left: solid 2px rgb(7, 81, 106);
     border-right: solid 2px rgb(7, 81, 106);
-    border-bottom:solid 2px rgb(172, 212, 225);
+    border-bottom: solid 2px rgb(172, 212, 225);
     border-radius: 5px;
 
     margin-top: 5px;
@@ -125,35 +142,39 @@ input{
     color: floralwhite;
 
 }
+
 input::placeholder {
-  color: rgb(172, 212, 225);
+    color: rgb(172, 212, 225);
 }
-input:focus{
+
+input:focus {
     outline: none;
     border: solid 2px rgb(172, 212, 225);
 }
+
 .display-comments {
-  color: floralwhite;
-  font-family: 'Figtree';
-  font-size: 16px;
+    color: floralwhite;
+    font-family: 'Figtree';
+    font-size: 16px;
 
-  background-color: rgb(7, 81, 106);
+    background-color: rgb(7, 81, 106);
 
-  height: 100px;
-  padding: 5px;
+    height: 100px;
+    padding: 5px;
 
-  overflow-y: scroll;
-  overflow-x: hidden;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
-
 
 /* Scrollbar: https://css-tricks.com/custom-scrollbars-in-webkit/ */
 .display-comments::-webkit-scrollbar {
     width: 5px;
 }
+
 .display-comments::-webkit-scrollbar-track {
     background-color: black;
 }
+
 .display-comments::-webkit-scrollbar-thumb {
     background-color: rgb(209, 232, 239);
-} 
+}

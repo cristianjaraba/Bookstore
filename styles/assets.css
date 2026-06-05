@@ -1,24 +1,13 @@
 .like-btn,
-.send-comment-btn{
+.send-comment-btn {
     background-color: inherit;
-    
+
     border: none;
 
     cursor: pointer;
 }
-@keyframes myAnimation {
-  0%   {transform: scale(40%);}
-  25%  {transform: scale(150%);}
-  50%  {transform: scale(70%);}
-  100% {transform: scale(100%);}
-}
-.liked{
+
+.liked {
     fill: #FD5B4F;
     stroke: none;
-}
-.like{
-    fill: #FD5B4F;
-    stroke: none;
-    animation-name: "myAnimation";
-    animation-duration: 2s;
 }

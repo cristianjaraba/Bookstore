@@ -1,8 +1,12 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
 .book {
-    background-color: rgb(7, 81, 106);
-
-    height: 500px;
     width: 300px;
+    min-height: 620px;
+
+    background-color: rgb(7, 81, 106);
 
     border-radius: 10px;
 
@@ -12,9 +16,7 @@
     overflow: hidden;
 }
 
-.book>h3 {
-    padding: 10px;
-
+h3 {
     height: 70px;
 
     display: flex;
@@ -22,8 +24,12 @@
     justify-content: center;
 }
 
-hr {
-    border: solid 1px rgb(172, 212, 225);
+.book-title, 
+.img-wrapper,
+.book-content
+ {
+    border-bottom: solid 1px rgb(172, 212, 225);
+    padding: 5px;
 }
 
 .img-wrapper {
@@ -59,14 +65,16 @@ hr {
 .book-content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 10px;
 
-    padding: 10px;
+    height: 200px;
 }
 
 .book-price-likes {
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .book-price-likes>p {
@@ -77,6 +85,7 @@ hr {
 .book-likes {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 5px;
 }
 
@@ -103,20 +112,21 @@ td {
 }
 
 .book-comments {
+    height: 225px;
 
-    padding: 10px;
+    padding: 5px;
 
     font-weight: bold;
 
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    
+    justify-content: space-between;
 }
 
 .input-container {
     display: flex;
-    align-items: center;
-    gap: 5px;
+   justify-content: space-between;
 }
 
 .input-container svg {
@@ -124,6 +134,12 @@ td {
     height: auto;
 
     fill: rgb(172, 212, 225);
+}
+
+.send-comment-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 input {
@@ -138,8 +154,6 @@ input {
     border-right: solid 2px rgb(7, 81, 106);
     border-bottom: solid 2px rgb(172, 212, 225);
     border-radius: 5px;
-
-    margin-top: 5px;
 
     color: floralwhite;
 

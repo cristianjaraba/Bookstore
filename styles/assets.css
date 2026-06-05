@@ -2,11 +2,18 @@
 .send-comment-btn {
     background-color: inherit;
 
-    border: none;
+    border: solid 2px rgb(7, 81, 106);
 
     cursor: pointer;
 }
+.like-btn {
+    display: flex;
+    align-items: center;
 
+    background-color: inherit;
+
+    cursor: pointer;
+}
 .liked {
     fill: #FD5B4F;
     stroke: none;

@@ -98,6 +98,8 @@ th {
 
 td {
     overflow-wrap: break-word;
+
+    text-indent: -8px;
 }
 
 .book-comments {

@@ -27,7 +27,7 @@ function getBookHTML(i) {
                 <td>: ${books[i].author}</td>
             </tr>
             <tr>
-                <th>Erscheinungsjahr</th>
+                <th>Erscheinungsjahr&nbsp;&nbsp;</th>
                 <td>: ${books[i].publishedYear}</td>
             </tr>
             <tr>
@@ -64,7 +64,7 @@ function getBookHTML(i) {
 function getCommentHTML(i, j) {
     return `
 <tr>
-    <th>[${books[i].comments[j].name}]</th>
+    <th>[${books[i].comments[j].name}]&nbsp;&nbsp;</th>
     <td>:  ${books[i].comments[j].comment}</td>
 </tr>`;
 }

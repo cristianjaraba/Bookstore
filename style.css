@@ -6,7 +6,7 @@
     font-family: 'Figtree';
     font-style: normal;
     font-weight: 400;
-    src: url('../assets/fonts/figtree-v9-latin-regular.woff2') format('woff2');
+    src: url('./assets/fonts/figtree-v9-latin-regular.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -17,7 +17,7 @@
     font-family: 'Figtree';
     font-style: normal;
     font-weight: 500;
-    src: url('../assets/fonts/figtree-v9-latin-500.woff2') format('woff2');
+    src: url('./assets/fonts/figtree-v9-latin-500.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -28,7 +28,7 @@
     font-family: 'Figtree';
     font-style: normal;
     font-weight: 700;
-    src: url('../assets/fonts/figtree-v9-latin-700.woff2') format('woff2');
+    src: url('./assets/fonts/figtree-v9-latin-700.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 
@@ -39,7 +39,7 @@
     font-family: 'Figtree';
     font-style: normal;
     font-weight: 800;
-    src: url('../assets/fonts/figtree-v9-latin-800.woff2') format('woff2');
+    src: url('./assets/fonts/figtree-v9-latin-800.woff2') format('woff2');
     /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
 *{
@@ -121,15 +121,39 @@ footer svg {
     height: auto;
 }
 /* Responsive design */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     main {
         padding-left: 5px;
         padding-right: 5px;
     }
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+    main {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
 @media (min-width: 769px) and (max-width: 1279px) {
     main {
         padding-left: 50px;
         padding-right: 50px;
+    }  
+}
+
+@media (min-width: 1280px) {
+    .book{
+        height: 550px;
+        width: 350px;
+    }
+    *{
+        font-size: calc(100% + 0.5px);
+    }
+    h1{
+        font-size: 35px;
+    }
+    h3{
+        font-size: 22px;
     }
 }

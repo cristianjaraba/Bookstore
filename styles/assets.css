@@ -18,3 +18,18 @@
     fill: #FD5B4F;
     stroke: none;
 }
+@keyframes heartBeatAnimation {
+    0%   { transform: scale(1.75); }
+    25%  { transform: scale(1); }
+    50%  { transform: scale(1.75); }
+    100% { transform: scale(1); }
+}
+
+.heart-beat {
+    animation-name: heartBeatAnimation;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+
+    fill: #FD5B4F;
+    stroke: none;
+}

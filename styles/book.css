@@ -4,7 +4,7 @@
 }
 .book {
     width: 300px;
-    min-height: 620px;
+    min-height: 575px;
 
     background-color: rgb(7, 81, 106);
 
@@ -68,7 +68,7 @@ h3 {
     justify-content: center;
     gap: 10px;
 
-    height: 200px;
+    height: 150px;
 }
 
 .book-price-likes {

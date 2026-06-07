@@ -13,7 +13,7 @@ function getBookHTML(i) {
                 <p>${books[i].price}€</p>
                 <div class="book-likes">
                     <p class="like-displayer" id="like-displayer${i}">${books[i].likes}</p>
-                    <button onclick="likeDislike(${i})" class="like-btn">
+                    <button onclick="toggleHeart_BeatClass(${i})" class="like-btn">
                         <svg id="heart-icon${i}" stroke="black" stroke-width="1" 
                             xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="#07516a"
                             class="bi bi-heart-fill" viewBox="0 0 16 16">
@@ -40,7 +40,7 @@ function getBookHTML(i) {
         </div>
         <div class="book-comments">
             <h4>Kommentare:</h4>
-            <div class="display-comments">
+            <div class="display-comments" id="display-comments${i}">
                 <table id="comments-table${i}">
                 </table>
             </div>
@@ -71,4 +71,11 @@ function getCommentHTML(i, j) {
 </tr>`;
 }
 
+function getNewCommentHTML(value) {
+    return `
+<tr>
+    <th>[anonym]&nbsp;&nbsp;</th>
+    <td>:  ${value}</td>
+</tr>`;
+}
 

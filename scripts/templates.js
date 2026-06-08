@@ -2,13 +2,13 @@ function getBookHTML(i) {
     return `
  <div class="book">
         <div class="book-title">
-            <button class="favorite-btn" onclick="toggleFavoriteClass(${i})">
-                <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 116.864" enable-background="new 0 0 122.88 116.864" xml:space="preserve"><g><polygon id="favorite-icon${i}" stroke="black" stroke-width="6" fill="none" fill-rule="evenodd" clip-rule="evenodd" points="61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0"/></g></svg>
-            </button>
             <h3>${books[i].name}</h3>
         </div>
         <div class="img-wrapper">
             <div class="bg-img"></div>
+            <button class="favorite-btn" onclick="toggleFavoriteClass(${i})">
+                <svg  version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 122.88 116.864" enable-background="new 0 0 122.88 116.864" xml:space="preserve"><g><polygon id="favorite-icon${i}" stroke="black" stroke-width="6" fill="none" fill-rule="evenodd" clip-rule="evenodd" points="61.44,0 78.351,41.326 122.88,44.638 88.803,73.491 99.412,116.864 61.44,93.371 23.468,116.864 34.078,73.491 0,44.638 44.529,41.326 61.44,0"/></g></svg>
+            </button>
             <img class="book-img" src="./assets/img/book_img.png" alt="Bild eines Buches">
         </div>
         <div class="book-content">

@@ -2,12 +2,15 @@ const booksWrapperRef = document.getElementById('books-wrapper');
 
 function renderBooks() {
     getFromLocalStorage();
-    booksWrapperRef.innerHTML = "";
     for (let bookIndex = 0; bookIndex < books.length; bookIndex++) {
         booksWrapperRef.innerHTML += getBookHTML(bookIndex);
         if (books[bookIndex].liked) {
             const likeBtnRef = document.getElementById('heart-icon' + bookIndex);
             likeBtnRef.classList.add('liked');
+        }
+        if (books[bookIndex].favorite) {
+            const favoriteBtnRef = document.getElementById('favorite-icon' + bookIndex);
+            favoriteBtnRef.classList.add('favorite');
         }
         if (books[bookIndex].comments.length == 0) {
             document.getElementById("display-comments" + bookIndex).innerHTML = "Noch keine Kommentare";
@@ -77,12 +80,15 @@ function getNewLikesAmount(i) {
 }
 
 function addComment(i) {
+    const inputRef = document.getElementById('input' + i);
+    if (inputRef.value == "") {
+        return;
+    }
     if (document.getElementById("display-comments" + i).innerHTML == "Noch keine Kommentare") {
         document.getElementById("display-comments" + i).innerHTML = `
         <table id="comments-table${i}">
                 </table>`;
     }
-    const inputRef = document.getElementById('input' + i);
     const commentsTableRef = document.getElementById('comments-table' + i);
     commentsTableRef.innerHTML += getNewCommentHTML(inputRef.value);
     books[i].comments.push(
@@ -94,4 +100,43 @@ function addComment(i) {
     inputRef.value = '';
     saveToLocalStorage();
 }
+function toggleFavoriteClass(i) {
+   const favoriteBtnRef = document.getElementById('favorite-icon' + i);
+    if (addFavorite(i)) {
+        favoriteBtnRef.classList.add('favorite');
+    }
+    else {
+        favoriteBtnRef.classList.remove('favorite');
+    }
+}
+function addFavorite(i) {
+    if (books[i].favorite) {
+        books[i].favorite = false;
+    }
+    else{
+        books[i].favorite = true;
+    }
+    saveToLocalStorage();
+    return books[i].favorite;
+}
 
+function renderAllBooks() {
+    booksWrapperRef.innerHTML = "";
+    renderBooks();
+}
+
+function renderFavoriteBooks(){
+    getFromLocalStorage();
+    booksWrapperRef.innerHTML = "";
+    for (let bookIndex = 0; bookIndex < books.length; bookIndex++) {
+        if (books[bookIndex].favorite) {
+            booksWrapperRef.innerHTML += getBookHTML(bookIndex);
+            const favoriteBtnRef = document.getElementById('favorite-icon' + bookIndex);
+            favoriteBtnRef.classList.add('favorite');
+            const commentsTableRef = document.getElementById('comments-table' + bookIndex);
+            for (let commentIndex = 0; commentIndex < books[bookIndex].comments.length; commentIndex++) {
+            commentsTableRef.innerHTML += getCommentHTML(bookIndex, commentIndex);
+            }
+        }      
+    }
+}

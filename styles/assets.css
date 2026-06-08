@@ -1,18 +1,28 @@
 .like-btn,
-.send-comment-btn {
+.send-comment-btn,
+.favorite-btn {
     background-color: inherit;
 
     border: solid 2px rgb(7, 81, 106);
 
     cursor: pointer;
 }
-.like-btn {
+.like-btn, .favorite-btn {
     display: flex;
     align-items: center;
 
     background-color: inherit;
 
     cursor: pointer;
+}
+.favorite-btn{
+    height: 36px;
+    width: 36px;
+
+    position: absolute;
+
+    top: -5px;
+    left: -5px;
 }
 .liked {
     fill: #FD5B4F;
@@ -32,4 +42,22 @@
 
     fill: #FD5B4F;
     stroke: none;
+}
+
+.favorite{
+    fill: #FFD700;
+    stroke: none;
+}
+
+.render-btns-wrapper button{
+    background-color: rgb(7, 81, 106);
+
+    color: floralwhite;
+
+    border: 1px solid rgb(172, 212, 225);
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    padding: 5px;
 }

@@ -19,7 +19,13 @@
             <h1>Bookstore</h1>
         </div>
     </header>
-    <main id="books-wrapper">
+    <main>
+        <div class="render-btns-wrapper">
+            <button id="all-books-btn" onclick="renderAllBooks()">Alle Bücher</button>
+            <button id="only-fvorites-btn" onclick="renderFavoriteBooks()">Nur Favorite</button>
+        </div>
+        <section id="books-wrapper">
+        </section>
     </main>
     <footer>
         <svg role="img" aria-labelledby="DA-Logo-Title DA-Logo-Desc" viewBox="0 0 154 44" fill="none"
@@ -96,3 +102,4 @@
 </body>
 
 </html>
+

@@ -31,7 +31,9 @@ h3 {
     border-bottom: solid 1px rgb(172, 212, 225);
     padding: 5px;
 }
-
+.book-title{
+    position: relative;
+}
 .img-wrapper {
     position: relative;
     background-color: rgba(41, 116, 141);
@@ -66,7 +68,7 @@ h3 {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 10px;
+    gap: 5px;
 
     height: 150px;
 }
@@ -86,7 +88,6 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 5px;
 }
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/font-variant-numeric */
